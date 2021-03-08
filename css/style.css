@@ -1,0 +1,10 @@
+:root{
+    --larguracard: 151px;
+    --alturacard: 91px;
+}
+
+.card{
+    width: var(--larguracard);
+    height: var(--alturacard);
+    border: 1px solid gray;
+}
