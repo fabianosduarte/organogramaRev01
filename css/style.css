@@ -1,26 +1,99 @@
 :root{
     --larguracard: 151px;
     --alturacard: 91px;
+    --espessura: 1px;
+    --estiloborda: solid;
+    --corborda: gray;
+    --alturaconector: 50px;
 }
 
 .card{
     width: var(--larguracard);
     height: var(--alturacard);
-    border: 1px solid gray;
+    border: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
-.bordaSup{
-
+.separador{
+    width: auto;
+    height: 30px;
+    background-color: #f3f7fa;
 }
 
-.bordaDir{
-
+.blocoSupMeio{
+    width: auto;
+    height: fit-content;
+    border-top: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
-.bordaInf{
+/* Caixas */
 
+.caixaSuperior{
+    display: grid;
+    grid-template-rows: auto auto;
 }
 
-.bordaEsq{
+.caixaLatEsq{
+    display: grid;
+    grid-template-columns: max-content auto;
+}
 
+.caixaCantoDir{
+    display: grid;
+    grid-template-rows: auto max-content;
+}
+
+
+/* Bordas */
+
+.bordaTopoPisoEsq{
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+.bordaTopoPisoDir{
+    float: right;
+    display: grid;
+    grid-template-columns: auto min-content;
+}
+
+.bordaLat{
+    display: grid;
+    grid-template-rows: max-content;
+}
+
+
+/* Margens */
+
+.margemLateral{
+    width: calc((var(--larguracard)-1)/2);
+}
+
+
+/* Linhas de Conectores */
+
+.conVert{
+    height: 50px;
+    border-left: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.conHorizontal{
+    width: 100px;
+    height: calc((var(--alturacard)+1)/2);
+    border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.conCantoSupEsq{
+    width: auto;
+    height: var(--alturaconector);
+    border: var(--espessura) var(--estiloborda) var(--corborda);
+    border-right: none;
+    border-bottom: none;
+}
+
+.conCantoSupDir{
+    width: auto;
+    height: var(--alturaconector);
+    border: var(--espessura) var(--estiloborda) var(--corborda);
+    border-left: none;
+    border-bottom: none;
 }
