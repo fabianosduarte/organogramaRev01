@@ -5,6 +5,7 @@
     --estiloborda: solid;
     --corborda: gray;
     --alturaconector: 50px;
+    --alturaseparador: 30px;
 }
 
 .card{
@@ -15,8 +16,13 @@
 
 .separador{
     width: auto;
-    height: 30px;
+    height: var(--alturaseparador);
     background-color: #f3f7fa;
+}
+
+.separadorLinha{
+    width: auto;
+    height: var(--alturaseparador);
 }
 
 
@@ -37,6 +43,11 @@
 .blocoLatDir{
     display: grid;
     grid-template-rows: max-content auto;
+}
+
+.blocoFilho{
+    display: grid;
+    grid-template-columns: max-content max-content;
 }
 
 
