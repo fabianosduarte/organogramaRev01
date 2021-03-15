@@ -19,11 +19,26 @@
     background-color: #f3f7fa;
 }
 
+
+/* Blocos */
+
 .blocoSupMeio{
     width: auto;
     height: fit-content;
     border-top: var(--espessura) var(--estiloborda) var(--corborda);
 }
+
+.blocoLatEsq{
+    width: fit-content;
+    height: auto;
+    border-left: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.blocoLatDir{
+    display: grid;
+    grid-template-rows: max-content auto;
+}
+
 
 /* Caixas */
 
@@ -50,17 +65,10 @@
     grid-template-columns: max-content auto;
 }
 
-.bordaTopoPisoDir{
-    float: right;
-    display: grid;
-    grid-template-columns: auto min-content;
-}
-
 .bordaLat{
     display: grid;
     grid-template-rows: max-content;
 }
-
 
 /* Margens */
 
@@ -91,9 +99,15 @@
 }
 
 .conCantoSupDir{
-    width: auto;
+    width: calc((var(--larguracard)+1)/2);
     height: var(--alturaconector);
-    border: var(--espessura) var(--estiloborda) var(--corborda);
-    border-left: none;
-    border-bottom: none;
+    border-right: var(--espessura) var(--estiloborda) var(--corborda);
+    border-top: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.conCaixaFilha{
+    width: 100px;
+    height: calc((var(--alturacard)+1)/2);
+    border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
+    border-left: var(--espessura) var(--estiloborda) var(--corborda);
 }
