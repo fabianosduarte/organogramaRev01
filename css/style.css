@@ -4,8 +4,14 @@
     --espessura: 1px;
     --estiloborda: solid;
     --corborda: gray;
-    --alturaconector: 50px;
+    --alturaconector: 30px;
+    --larguraconector: 50px;
     --alturaseparador: 30px;
+    --margemcoluna: 25px;
+}
+
+body{
+    white-space: nowrap;
 }
 
 .card{
@@ -50,6 +56,34 @@
     grid-template-columns: max-content max-content;
 }
 
+.blocoColunas{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+
+.blocoSegundaColuna{
+    width: auto;
+    padding-left: calc(var(--margemcoluna)*2);
+    padding-right: var(--margemcoluna);
+    border-top: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.blocoColMeio{
+    width: auto;
+    padding-left: var(--margemcoluna);
+    padding-right: var(--margemcoluna);
+    border-top: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.blocoPenultimaColuna{
+    width: auto;
+    padding-left: var(--margemcoluna);
+    padding-right: calc(var(--margemcoluna)*2);
+    border-top: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+
 
 /* Caixas */
 
@@ -81,6 +115,7 @@
     grid-template-rows: max-content;
 }
 
+
 /* Margens */
 
 .margemLateral{
@@ -91,12 +126,12 @@
 /* Linhas de Conectores */
 
 .conVert{
-    height: 50px;
+    height: var(--alturaconector);
     border-left: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
 .conHorizontal{
-    width: 100px;
+    width: var(--larguraconector);
     height: calc((var(--alturacard)+1)/2);
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
 }
@@ -117,7 +152,7 @@
 }
 
 .conCaixaFilha{
-    width: 100px;
+    width: var(--larguraconector);
     height: calc((var(--alturacard)+1)/2);
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
     border-left: var(--espessura) var(--estiloborda) var(--corborda);
