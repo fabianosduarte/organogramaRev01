@@ -109,7 +109,7 @@ body{
     grid-template-rows: auto auto;
 }
 
-.caixaLatEsq{
+.caixaLateral{
     display: grid;
     grid-template-columns: max-content auto;
 }
