@@ -6,7 +6,7 @@
     --corborda: gray;
     --alturaconector: 30px;
     --larguraconector: 50px;
-    --larguraconectorteto: 200px;
+    --larguraconectorteto: 150px;
     --alturaseparador: 30px;
     --margemcoluna: 25px;
 }
@@ -19,6 +19,12 @@ body{
     width: var(--larguracard);
     height: var(--alturacard);
     border: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+.cardTracejado{
+    width: var(--larguracard);
+    height: var(--alturacard);
+    border: var(--espessura) dashed var(--corborda);
 }
 
 .separador{
@@ -141,7 +147,7 @@ body{
 }
 
 .margemTetoTopo{
-    margin-top: 75px;
+    margin-top: 50px;
 }
 
 .margemTetoCargos{
@@ -168,6 +174,12 @@ body{
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
+.conHorizTracejado{
+    width: var(--larguraconectorteto);
+    height: calc((var(--alturacard)+1)/2);
+    border-bottom: var(--espessura) dashed var(--corborda);
+}
+
 .conCantoSupEsq{
     width: auto;
     height: var(--alturaconector);
@@ -191,6 +203,15 @@ body{
 }
 
 .linhaOrtogonal{
-    height: 400px;
+    height: 350px;
     border-left: var(--espessura) var(--estiloborda) var(--corborda);
+}
+
+
+/* Exemplo */
+
+#organogramaExemplo{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    justify-items: center;
 }
