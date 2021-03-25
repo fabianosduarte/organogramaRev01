@@ -71,7 +71,7 @@ body{
 
 .blocoSegundaColuna{
     width: auto;
-    padding-left: calc(var(--margemcoluna)*2);
+    padding-left: calc(var(--margemcoluna) * 2);
     padding-right: var(--margemcoluna);
     border-top: var(--espessura) var(--estiloborda) var(--corborda);
 }
@@ -86,7 +86,7 @@ body{
 .blocoPenultimaColuna{
     width: auto;
     padding-left: var(--margemcoluna);
-    padding-right: calc(var(--margemcoluna)*2);
+    padding-right: calc(var(--margemcoluna) * 2);
     border-top: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
@@ -143,7 +143,7 @@ body{
 /* Margens */
 
 .margemLateral{
-    width: calc((var(--larguracard)-1)/2);
+    width: calc((var(--larguracard) + 1px)/2);
 }
 
 .margemTetoTopo{
@@ -164,19 +164,19 @@ body{
 
 .conHorizontal{
     width: var(--larguraconector);
-    height: calc((var(--alturacard)+1)/2);
+    height: calc((var(--alturacard) + 1px)/2);
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
 .conHorizontalTeto{
     width: var(--larguraconectorteto);
-    height: calc((var(--alturacard)+1)/2);
+    height: calc((var(--alturacard) + 1px)/2);
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
 }
 
 .conHorizTracejado{
     width: var(--larguraconectorteto);
-    height: calc((var(--alturacard)+1)/2);
+    height: calc((var(--alturacard) + 1px)/2);
     border-bottom: var(--espessura) dashed var(--corborda);
 }
 
@@ -189,7 +189,7 @@ body{
 }
 
 .conCantoSupDir{
-    width: calc((var(--larguracard)+1)/2);
+    width: calc((var(--larguracard) + 1px)/2);
     height: var(--alturaconector);
     border-right: var(--espessura) var(--estiloborda) var(--corborda);
     border-top: var(--espessura) var(--estiloborda) var(--corborda);
@@ -197,7 +197,7 @@ body{
 
 .conCaixaFilha{
     width: var(--larguraconector);
-    height: calc((var(--alturacard)+1)/2);
+    height: calc((var(--alturacard) + 1px)/2);
     border-bottom: var(--espessura) var(--estiloborda) var(--corborda);
     border-left: var(--espessura) var(--estiloborda) var(--corborda);
 }
